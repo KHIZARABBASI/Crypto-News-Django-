@@ -1,0 +1,90 @@
+{% extends "home.html" %}
+
+
+{% block latest_news %}
+    <!-- Latest News -->
+    <div class="col-lg-3">
+        <h4 class="mb-3 text-center">Latest News</h4>
+        <div class="list-group">
+            {% for newss in news|slice:":1" %}
+                <img src="{{newss.image.url}}" class="rounded mx-auto d-block card-img-top" alt="Article Image" style="width: 120px; height: 120px;">
+                <a href="#" class=" list-group-item-action custom-link"><h6>{{ newss.title }}</h6></a>
+            {% endfor %}
+            {% for newss in news|slice:"1:5" %}
+                <a href="#" class=" list-group-item-action custom-link mt-4"><h6>{{ post.title }}</h6></a>
+            {% endfor %}
+        
+        </div>
+    </div>
+{% endblock latest_news %}
+
+{% block Headlines %}
+    <!-- Headlines -->
+    <div class="col-lg-6">
+        <h4 class="mb-3 text-center">Headlines</h4>
+        <div class="card">
+            {% for newss in news|slice:":1" %}
+                <img src="{{ newss.image.url }}" class="card-img-top headline-image" alt="Main Headline Image">
+                <div class="card-body">
+                    <a href="#" class=" list-group-item-action custom-link"><h2 class="headline-main">{{ newss.title }}</h2></a>
+                    
+                </div>
+            {% endfor %}
+            
+            </div>
+            {% for newss in news|slice:"1:7" %}
+                <div class="card">
+                    <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{newss.image.url}}"  class="img-fluid headline-image" alt="Small Headline 1">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h6 class="headline-small">{{newss.title}}</h6>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+            
+    </div>
+{% endblock Headlines %}
+
+{% block ads %}
+     <!-- Ads -->
+     <div class="col-lg-2">
+        <h4 class="mb-3 text-center">Sponsored Ads</h4>
+        <div class="card mb-3">
+            <img src="https://via.placeholder.com/300x150" class="card-img-top" alt="Ad 1">
+            <div class="card-body">
+                <p class="card-text">Discover the best crypto trading platforms.</p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x150" class="card-img-top" alt="Ad 2">
+            <div class="card-body">
+                <p class="card-text">Join the blockchain revolution today.</p>
+                <a href="#" class="btn btn-primary">Sign Up</a>
+            </div>
+        </div>
+    </div>
+{% endblock ads %}
+
+{% block letest_articles %}
+    {% for article in articles %}
+        <div class="col-md-4" >
+            <div class="card" >
+                <img src="{{article.image.url}} "style="width: 350px; height: 200px; overflow: hidden; margin: auto;" class="card-img-top" alt="Article Image">
+                <div class="card-body">
+                    <h5 class="card-title">{{article.title|truncatewords:5}}</h5>
+                    <p class="card-text">{{ article.content|striptags|truncatewords:10 }}</p>
+                    <a href="{% url 'view_full_Article' article.pk %}" class="btn btn-secondary">Read More</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+{% endblock letest_articles %}
+

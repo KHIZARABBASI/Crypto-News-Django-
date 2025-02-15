@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+    <div class="content ">
+        <div class="container-fluid">
+            <div class="container text-center">
+            <div class="row mt-4">
+                <!-- Left Column -->
+                <div class="col-12 col-md-3" style="height: 300vh; background-color: lightblue;">
+                {% block latest_news %}
+                {% endblock latest_news %}
+            </div>
+
+            <!-- Right Column -->
+                <div class="col-12 col-md-9 mt-3 mt-md-0 mt-4">
+                <div class="container">
+                    <div class="row">
+                        <!--post col-->
+                        <div class="col-8">
+                            {% block post %}{% endblock post %}
+                        </div>
+                        <!--ads col-->
+                        <div class="col-4">
+                            {% block ads %}{% endblock ads %}
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock main_content %}
+
+{% block contant %} 
+{% endblock contant %}

@@ -1,0 +1,8 @@
+# Virtual environment
+venv/
+new_website
+new_website/
+__pycache__/
+*.pyc
+*.pyo
+db.sqlite3

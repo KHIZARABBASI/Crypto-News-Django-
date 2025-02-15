@@ -1,0 +1,47 @@
+{% extends "home.html" %}
+
+{% block title %}
+Home
+{% endblock title %}
+
+{% block contant %}
+<div class="container">
+    
+</div>
+{% endblock contant %}
+
+{% block latest_news %}
+<h1>Crypto News</h1>
+
+  {% for post in posts|slice:":2" %}
+    <div class="card-body ">
+      <h5 class="card-title">{{ post.title }}</h5>
+      <p class="card-text">{{ post.content|truncatewords:20 }}</p>
+      <a href="#" class="btn btn-primary">see all</a>
+    </div>
+  {% endfor %}
+{% endblock latest_news %}
+{% block post %}
+<div class="container text-center ">
+    {% for post in posts %}
+    <div class="col mt-3"> <!-- Full width on small screens, half width on medium and above -->
+      <div class="card" style="width: 100%;">
+        <img src="{{ post.image.url }}"  class="card-img-top" alt="Post Image" style="object-fit: cover; height: 200px;">
+        <div class="card-body">
+          <h5 class="card-title">{{ post.title }}</h5>
+          <p class="card-text">{{ post.content|truncatewords:20 }}</p>
+          <a href="#" class="btn btn-primary">See full news</a>
+          <p class="card-text"><small class="text-muted">Published: {{ post.published_date|date:"F j, Y" }}</small></p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  
+
+{% endblock post %}
+
+{% block ads %}
+<img src="/media/ad.jpg"  class="card-img-top" alt="Post Image">
+<p>This is an ad</p>
+{% endblock ads %}
