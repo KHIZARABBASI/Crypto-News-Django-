@@ -1,5 +1,9 @@
 
 # Crypto News
+## Create Virtual Enviornment 
+```cmd
+py -m venv Env_Name
+```
 
 ## steps to Follow
 
