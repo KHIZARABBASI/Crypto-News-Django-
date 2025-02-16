@@ -41,3 +41,18 @@ git remote add origin https://github.com/KHIZARABBASI/Crypto-News-Django-.git
 ```cmd
 git push -u origin main
 ```
+
+## Projects Images
+1.
+![Alt text](https://github.com/KHIZARABBASI/Crypto-News-Django-/blob/main/imgs/Screenshot%20(107).png)
+2.
+![Alt text](https://github.com/KHIZARABBASI/Crypto-News-Django-/blob/main/imgs/Screenshot%20(108).png)
+3.
+![Alt text](https://github.com/KHIZARABBASI/Crypto-News-Django-/blob/main/imgs/Screenshot%20(109).png)
+4.
+![Alt text](https://github.com/KHIZARABBASI/Crypto-News-Django-/blob/main/imgs/Screenshot%20(110).png)
+5.
+![Alt text](https://github.com/KHIZARABBASI/Crypto-News-Django-/blob/main/imgs/Screenshot%20(111).png)
+6.
+![Alt text](https://github.com/KHIZARABBASI/Crypto-News-Django-/blob/main/imgs/Screenshot%20(112).png)
+
